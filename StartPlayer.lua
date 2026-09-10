@@ -4,6 +4,8 @@
 ---- options ----
 local name = "wakeyj" -- your name
 local colour = BrickColor.Red() -- your player colour
+local ip = "127.0.0.1" -- ip to join
+local port = "53640" -- port of the ip to join
 
 
 ---- the code i think ----
@@ -80,7 +82,7 @@ local success, errorMsg = pcall(function ()
 		player.Name = name
 	end
 	
-	NetworkClient:connect("localhost", 53640, 0)
+	NetworkClient:connect(ip, port, 0)
 end)
 
 if not success then

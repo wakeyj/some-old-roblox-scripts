@@ -1,3 +1,13 @@
+-- super duper basic team create join script that can probably be improved but im lazyy
+-- might need fixing a bit i dunno i havent tested some of this
+
+---- options ----
+local name = "wakeyj" -- your name
+local colour = BrickColor.Red() -- your player colour
+
+
+---- the code i think ----
+
 local Visit = game:service("Visit")
 local Players = game:service("Players")
 local NetworkClient = game:service("NetworkClient")
@@ -47,6 +57,7 @@ local function onConnectionAccepted(peer, replicator)
 	char.CanCollide = false
 	char.Anchored = true
 	char.Name = "Head"
+	char.BrickColor = colour
 	char.Parent = mchar
 	coroutine.wrap(function()
 		while wait() do
@@ -66,6 +77,7 @@ local success, errorMsg = pcall(function ()
 	
 	if not player then
 		player = Players:createLocalPlayer(0)
+		player.Name = name
 	end
 	
 	NetworkClient:connect("localhost", 53640, 0)

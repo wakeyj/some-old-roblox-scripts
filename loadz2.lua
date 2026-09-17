@@ -1,4 +1,4 @@
--------- random rbxl loading thingy ("rrlt" for short), created by wakeyjakey --------
+-------- random rbxl loading thingy ("rrlt" for short), created by wakeyj --------
 
 -- this version fixes teams for 2007M and above!
 

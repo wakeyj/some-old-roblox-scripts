@@ -74,14 +74,13 @@ for i, team in pairs(game.Teams:children()) do
     end
 end
 for i, plr in pairs(game.Players:children()) do
+    plr.Neutral = true
     if isteams == true then
         for i = 1, #teams, 1 do
             local t = teams[math.random(1, #teams)]
             if t.AutoAssignable == true then
                 plr.Neutral = false
                 plr.TeamColor = t.TeamColor
-            else
-                plr.Neutral = true
             end
         end
     end
